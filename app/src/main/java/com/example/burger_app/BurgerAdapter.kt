@@ -17,6 +17,8 @@ class BurgerAdapter(
     val context: Context1,
 ) : RecyclerView.Adapter<BurgerAdapter.BurgerHolder>() {
     var temp: Boolean = true
+    var ee : Int = R.drawable.text
+    var aa : Int = R.drawable.peresvet
 
     inner class BurgerHolder(item: View) : RecyclerView.ViewHolder(item) {
         var tvItemUser: TextView = itemView.findViewById(R.id.textView5)
@@ -33,10 +35,49 @@ class BurgerAdapter(
             holder.tvItemUser.text = list[position].title
         }
         holder.itemView.setOnClickListener {
-            holder.itemView.drawingTime.times(12)/////*/*/**/*/*    не доделал а именно при нажатии меняется картинка но не менчется в обратную сторону
-//            if (temp == true) {            h
-            holder.tvImage.setImageResource(R.drawable.text)
-            holder.tvImage.setImageResource(R.drawable.peresvet)
+//            holder.itemView.drawingTime.times(12)/////*/*/**/*/*    не доделал а именно при нажатии меняется картинка но не менчется в обратную сторону
+////            if (temp == true) {            h
+//            holder.tvImage.setImageResource(R.drawable.text)
+//            holder.tvImage.setImageResource(R.drawable.peresvet)
+//            if (holder.itemView.id == 0){
+//                holder.tvImage.setImageResource(R.drawable.peresvet)
+//                if (holder.itemView.id == 1 && holder.itemView.id == 2 && holder.itemView.id ==3 && holder.itemView.id == 4 && holder.itemView.id == 5){
+//                    holder.tvImage.setImageResource(R.drawable.text)
+//                }
+//            }else if (holder.itemView.id == 1){
+//                holder.tvImage.setImageResource(R.drawable.peresvet)
+//                if (holder.itemView.id == 0 && holder.itemView.id == 2 && holder.itemView.id ==3 && holder.itemView.id == 4 && holder.itemView.id == 5){
+//                    holder.tvImage.setImageResource(R.drawable.text)
+//                }
+//            }else if (holder.itemView.id == 2){
+//                holder.tvImage.setImageResource(R.drawable.peresvet)
+//                if (holder.itemView.id == 1 && holder.itemView.id == 0 && holder.itemView.id ==3 && holder.itemView.id == 4 && holder.itemView.id == 5){
+//                    holder.tvImage.setImageResource(R.drawable.text)
+//                }
+//            }else if (holder.itemView.id == 3){
+//                holder.tvImage.setImageResource(R.drawable.peresvet)
+//                if (holder.itemView.id == 1 && holder.itemView.id == 0 && holder.itemView.id ==2 && holder.itemView.id == 4 && holder.itemView.id == 5){
+//                    holder.tvImage.setImageResource(R.drawable.text)
+//                }
+//            }else if (holder.itemView.id == 4){
+//                holder.tvImage.setImageResource(R.drawable.peresvet)
+//                if (holder.itemView.id == 1 && holder.itemView.id == 0 && holder.itemView.id ==2 && holder.itemView.id == 3 && holder.itemView.id == 5){
+//                    holder.tvImage.setImageResource(R.drawable.text)
+//                }
+//            }else if (holder.itemView.id == 5){
+//                holder.tvImage.setImageResource(R.drawable.peresvet)
+//                if (holder.itemView.id == 1 && holder.itemView.id == 0 && holder.itemView.id ==2 && holder.itemView.id == 3 && holder.itemView.id == 4){
+//                    holder.tvImage.setImageResource(R.drawable.text)
+//                }
+//            }
+
+            if (temp){
+                holder.tvImage.setImageResource(aa)
+                temp = false
+            }else{
+                holder.tvImage.setImageResource(ee)
+                temp = true
+            }
 
             clickListener.onItemClick(position)
 //                temp = false

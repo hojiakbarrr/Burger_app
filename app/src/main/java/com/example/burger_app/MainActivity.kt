@@ -5,11 +5,9 @@ import android.os.Bundle
 import androidx.appcompat.widget.SearchView
 
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.burger_app.databinding.ActivityMainBinding
-import kotlin.collections.contains as contains1
 
 class MainActivity : AppCompatActivity(), BurgerAdapter.FoodClickListener,
     TypeAdapter.PlusClickListener {
@@ -36,7 +34,7 @@ class MainActivity : AppCompatActivity(), BurgerAdapter.FoodClickListener,
     var ss: Int  = 0
 
     var imAge = R.drawable.add_circle
-    var imageView = R.drawable.gamburger
+    var imageView = R.drawable.burger
     var imageView1 = R.drawable.bur1
     var imageView2 = R.drawable.bur
     var imageView3 = R.drawable.des
@@ -115,7 +113,7 @@ class MainActivity : AppCompatActivity(), BurgerAdapter.FoodClickListener,
         burgerList.add(BurgerType(imageView14, " Настоящая находка для любителей благородных сортов сыра. ", "Четыре сыра", 852, 5, imAge))
 
         filterburlist.addAll(burgerList)
-        filterburlist.clear()
+//        filterburlist.clear()
         setCategoryRecycle22(filterburlist)
 
 
@@ -160,6 +158,12 @@ class MainActivity : AppCompatActivity(), BurgerAdapter.FoodClickListener,
             filterburlist.clear()
             for (o in burgerList) {
                 if (o.cateogry == position) {
+//                    if (plantList[position].imageId ==  R.drawable.peresvet){
+//                        plantList[position].imageId = R.drawable.peresvet
+//                    }else{
+//                        plantList[position].imageId = R.drawable.text
+//                    }
+//                    plantList[position].imageId = R.drawable.peresvet
                     filterburlist.add(o)
 //                setCategoryRecycle22(list)
                     setCategoryRecycle22(filterburlist)

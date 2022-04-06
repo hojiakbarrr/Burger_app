@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/rep" />
+        app:srcCompat="@drawable/rep"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -69,7 +69,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gamburger" />
+        app:srcCompat="@drawable/burger" />
 
     <TextView
         android:id="@+id/textView8"
